@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Gamer - Luis</title>
+  <title>DarkDub | Portfolio</title>
 
   <!-- Tailwind + Lucide + Three + Vanta + Devicon + AOS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,22 +21,22 @@
 </head>
 <body class="text-gray-900 dark:text-gray-100 font-sans transition">
 
-  <!-- Fondo animado -->
+  <!-- Background -->
   <div id="bg"></div>
 
   <!-- NAV -->
   <nav class="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-950/70 backdrop-blur-md shadow-md z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400 flex items-center gap-2">
-        <i data-lucide="gamepad-2" class="w-6 h-6"></i> Luis Dev
+        <i data-lucide="gamepad-2" class="w-6 h-6"></i> DarkDub
       </h1>
       <ul class="hidden md:flex gap-6">
-        <li><a href="#inicio" class="hover:text-blue-500">Inicio</a></li>
-        <li><a href="#proyectos" class="hover:text-blue-500">Proyectos</a></li>
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
         <li><a href="#gamedev" class="hover:text-blue-500">GameDev</a></li>
         <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-        <li><a href="#redes" class="hover:text-blue-500">Redes</a></li>
-        <li><a href="#contacto" class="hover:text-blue-500">Contacto</a></li>
+        <li><a href="#social" class="hover:text-blue-500">Social</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
       </ul>
       <!-- Dark Mode Toggle -->
       <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:scale-105 transition">
@@ -47,84 +47,84 @@
   </nav>
 
   <!-- HERO -->
-  <section id="inicio" class="min-h-[70vh] flex flex-col justify-center items-center text-center relative z-10 px-6" data-aos="fade-up">
-    <img src="https://via.placeholder.com/150" alt="Perfil"
+  <section id="home" class="mt-10 min-h-[70vh] flex flex-col justify-center items-center text-center relative z-10 px-6" data-aos="fade-up">
+    <img src="assets/imagenes/avatar.jpg"  alt="Profile"
       class="rounded-full w-32 h-32 mb-6 shadow-lg border-4 border-blue-600">
-    <h2 class="text-4xl font-extrabold mb-3">Hola, soy Luis</h2>
+    <h2 class="text-4xl font-extrabold mb-3">Hi! I'm DarkDub</h2>
     <p class="text-lg md:text-xl mb-6 max-w-xl text-gray-300">
-      Desarrollador Web y GameDev con pasión por el diseño, los videojuegos y el código limpio
+      Web Developer & GameDev passionate about design, games, and clean code.
     </p>
     <div class="flex gap-4">
-      <a href="#proyectos" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold shadow-lg transition">Ver proyectos</a>
-      <a href="#contacto" class="bg-gray-700 hover:bg-gray-600 px-5 py-2 rounded-lg font-semibold shadow-lg transition">Contacto</a>
+      <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold shadow-lg transition">View Projects</a>
+      <a href="#contact" class="bg-gray-700 hover:bg-gray-600 px-5 py-2 rounded-lg font-semibold shadow-lg transition">Contact</a>
     </div>
   </section>
 
-  <!-- PROYECTOS -->
-<section id="proyectos" class="max-w-6xl mx-auto py-20 px-6 relative z-10">
-  <h3 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2" data-aos="zoom-in">
-    <i data-lucide="folder-code" class="w-7 h-7 text-blue-400"></i> Proyectos Web
-  </h3>
-  <div class="grid md:grid-cols-3 gap-8">
-    <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up">
-      <img src="https://picsum.photos/800/500?random=11" alt="Proyecto 1"
-           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-      <div class="absolute bottom-0 p-5 text-white">
-        <h4 class="text-xl font-semibold">Proyecto 1</h4>
-        <p class="text-sm">Descripción breve del proyecto.</p>
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-6xl mx-auto py-20 px-6 relative z-10">
+    <h3 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2" data-aos="zoom-in">
+      <i data-lucide="folder-code" class="w-7 h-7 text-blue-400"></i> Web Projects
+    </h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up">
+        <img src="https://picsum.photos/800/500?random=11" alt="Project 1"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 p-5 text-white">
+          <h4 class="text-xl font-semibold">Portfolio Website</h4>
+          <p class="text-sm">A modern personal portfolio built with Tailwind and animations.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up" data-aos-delay="200">
-      <img src="https://picsum.photos/800/500?random=12" alt="Proyecto 2"
-           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-      <div class="absolute bottom-0 p-5 text-white">
-        <h4 class="text-xl font-semibold">Proyecto 2</h4>
-        <p class="text-sm">Otro proyecto atractivo y funcional.</p>
+      <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://picsum.photos/800/500?random=12" alt="Project 2"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 p-5 text-white">
+          <h4 class="text-xl font-semibold">Inventory System</h4>
+          <p class="text-sm">A PHP-based inventory management system with daily reports.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up" data-aos-delay="400">
-      <img src="https://picsum.photos/800/500?random=13" alt="Proyecto 3"
-           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-      <div class="absolute bottom-0 p-5 text-white">
-        <h4 class="text-xl font-semibold">Proyecto 3</h4>
-        <p class="text-sm">Descripción de un proyecto destacado.</p>
+      <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up" data-aos-delay="400">
+        <img src="https://picsum.photos/800/500?random=13" alt="Project 3"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 p-5 text-white">
+          <h4 class="text-xl font-semibold">WorkDrive App</h4>
+          <p class="text-sm">A service hiring platform inspired by inDrive, built with Laravel.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- GAMEDEV -->
-<section id="gamedev" class="max-w-6xl mx-auto py-20 px-6 relative z-10">
-  <h3 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2" data-aos="zoom-in">
-    <i data-lucide="joystick" class="w-7 h-7 text-green-400"></i> GameDev
-  </h3>
-  <div class="grid md:grid-cols-2 gap-8">
-    <div class="relative group rounded-xl overflow-hidden shadow-lg h-96" data-aos="fade-right">
-      <img src="https://picsum.photos/1000/600?random=21" alt="Juego en Unity"
-           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-      <div class="absolute bottom-0 p-5 text-white">
-        <h4 class="text-xl font-semibold">Juego en Unity</h4>
-        <p class="text-sm">Un juego creado en Unity con mecánicas de aventura.</p>
+  <!-- GAMEDEV -->
+  <section id="gamedev" class="max-w-6xl mx-auto py-20 px-6 relative z-10">
+    <h3 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2" data-aos="zoom-in">
+      <i data-lucide="joystick" class="w-7 h-7 text-green-400"></i> Game Development
+    </h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="relative group rounded-xl overflow-hidden shadow-lg h-96" data-aos="fade-right">
+        <img src="https://picsum.photos/1000/600?random=21" alt="Unity Game"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 p-5 text-white">
+          <h4 class="text-xl font-semibold">Unity Game</h4>
+          <p class="text-sm">Adventure game built in Unity with custom mechanics and design.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="relative group rounded-xl overflow-hidden shadow-lg h-96" data-aos="fade-left">
-      <img src="assets/imagenes/robloxStudio.jpg" alt="Juego en Roblox"
-           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-      <div class="absolute bottom-0 p-5 text-white">
-        <h4 class="text-xl font-semibold">Juego en Roblox</h4>
-        <p class="text-sm">Juego creado en Roblox Studio con mapa personalizado.</p>
+      <div class="relative group rounded-xl overflow-hidden shadow-lg h-96" data-aos="fade-left">
+        <img src="assets/imagenes/robloxStudio.jpg" alt="Roblox Game"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 p-5 text-white">
+          <h4 class="text-xl font-semibold">Roblox Game</h4>
+          <p class="text-sm">Custom Roblox Studio project with an open world map.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- SKILLS -->
   <section id="skills" class="py-20 relative z-10">
@@ -168,44 +168,44 @@
     </div>
   </section>
 
-  <!-- REDES -->
-  <section id="redes" class="max-w-6xl mx-auto py-20 px-6 text-center relative z-10">
+  <!-- SOCIAL -->
+  <section id="social" class="max-w-6xl mx-auto py-20 px-6 text-center relative z-10">
     <h3 class="text-3xl font-bold mb-12 flex items-center justify-center gap-2" data-aos="zoom-in">
-      <i data-lucide="share-2" class="w-7 h-7 text-blue-400"></i> Redes Sociales
+      <i data-lucide="share-2" class="w-7 h-7 text-blue-400"></i> Social Links
     </h3>
-    <div class="grid md:grid-cols-5 gap-6">
-      <a href="#" target="_blank" class="p-6 rounded-xl bg-[#5865F2] text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-[#5865F2]/60 transition" data-aos="fade-up">
-        <i data-lucide="message-circle" class="w-8 h-8 mb-2"></i><span>Discord</span>
+    <div class="grid md:grid-cols-4 gap-6">
+      <a href=" https://discord.gg/q2gCsjnDmv 
+" target="_blank" class="p-6 rounded-xl bg-[#000] text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-[#5865F2]/60 transition" data-aos="fade-up">
+        <img src="assets/imagenes/discord.png" class="w-10 h-10 text-4xl mb-2"></><span>Discord</span>
       </a>
-      <a href="#" target="_blank" class="p-6 rounded-xl bg-gray-900 text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-gray-500/50 transition" data-aos="fade-up" data-aos-delay="150">
+      <a href="https://github.com/DarkDub" target="_blank" class="p-6 rounded-xl bg-gray-900 text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-gray-500/50 transition" data-aos="fade-up" data-aos-delay="150">
         <i class="devicon-github-original text-4xl mb-2"></i><span>GitHub</span>
       </a>
-      <a href="#" target="_blank" class="p-6 rounded-xl bg-[#0A66C2] text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-[#0A66C2]/60 transition" data-aos="fade-up" data-aos-delay="300">
-        <i class="devicon-linkedin-plain text-3xl mb-2"></i><span>LinkedIn</span>
+    
+      <a href="https://x.com/DarkDub_dev" target="_blank" class="p-6 rounded-xl bg-[#1DA1F2] text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-[#1DA1F2]/60 transition" data-aos="fade-up" data-aos-delay="450">
+        <i class="devicon-twitter-original text-3xl mb-2"></i><span>X (Twitter)</span>
       </a>
-      <a href="#" target="_blank" class="p-6 rounded-xl bg-[#1DA1F2] text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-[#1DA1F2]/60 transition" data-aos="fade-up" data-aos-delay="450">
-        <i class="devicon-twitter-original text-3xl mb-2"></i><span>Twitter</span>
-      </a>
-      <a href="#" target="_blank" class="p-6 rounded-xl bg-[#FF0000] text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-red-500/60 transition" data-aos="fade-up" data-aos-delay="600">
-        <i data-lucide="gamepad-2" class="w-8 h-8 mb-2"></i><span>Roblox</span>
+      <a href="https://www.roblox.com/es/users/7030777845/profile" target="_blank" class="p-6 rounded-xl bg-[#FF0000] text-white flex flex-col items-center shadow-lg hover:scale-110 hover:shadow-red-500/60 transition" data-aos="fade-up" data-aos-delay="600">
+        <img src="assets/imagenes/roblox.png" class="w-12 h-12 text-4xl mb-2"></><span>Roblox</span>
+
       </a>
     </div>
   </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="max-w-4xl mx-auto py-20 px-6 text-center relative z-10" data-aos="fade-up">
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-4xl mx-auto py-20 px-6 text-center relative z-10" data-aos="fade-up">
     <h3 class="text-3xl font-bold mb-6 flex items-center justify-center gap-2">
-      <i data-lucide="mail" class="w-7 h-7 text-red-400"></i> Contáctame
+      <i data-lucide="mail" class="w-7 h-7 text-red-400"></i> Contact Me
     </h3>
-    <p class="mb-6">¿Quieres trabajar conmigo? Escríbeme 📩</p>
-    <a href="mailto:tuemail@email.com" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition flex items-center gap-2 justify-center">
-      <i data-lucide="send" class="w-5 h-5"></i> Enviar correo
+    <p class="mb-6">Want to collaborate or hire me? Send me an email 📩</p>
+    <a href="mailto:darkdub.dev@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition flex items-center gap-2 justify-center">
+      <i data-lucide="send" class="w-5 h-5"></i> Send Email
     </a>
   </section>
 
   <!-- FOOTER -->
   <footer class="bg-black/40 text-gray-300 text-center py-6 relative z-10">
-    © 2025 Luis Duncan - Todos los derechos reservados
+    © 2025 DarkDub — All rights reserved
   </footer>
 
   <!-- SCRIPT -->
@@ -227,9 +227,8 @@
           waveHeight: 10,
           waveSpeed: 0.3,
           zoom: 1.00
-        })
+        });
       }
-      // Dark mode toggle
       const themeToggle = document.getElementById("theme-toggle");
       const root = document.documentElement;
       themeToggle.addEventListener("click", () => {
@@ -238,13 +237,13 @@
         updateThemeIcon();
       });
       function updateThemeIcon() {
-        const moon = themeToggle.querySelector("[data-lucide='moon']"); const sun = themeToggle.querySelector("[data-lucide='sun']");
+        const moon = themeToggle.querySelector("[data-lucide='moon']");
+        const sun = themeToggle.querySelector("[data-lucide='sun']");
         if (root.classList.contains("dark")) { moon.classList.add("hidden"); sun.classList.remove("hidden"); }
         else { sun.classList.add("hidden"); moon.classList.remove("hidden"); }
       }
       if (localStorage.getItem("theme") === "light") root.classList.remove("dark");
       updateThemeIcon();
-      // AOS
       AOS.init({ duration: 900, once: true });
     });
   </script>
