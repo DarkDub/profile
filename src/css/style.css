@@ -2,5 +2,13 @@
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 html, body {
-  overflow-x: hidden; /* evita scroll horizontal */
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 400px) {
+    html, body {
+
+    overflow-x: hidden;
+    }
+    
 }
