@@ -13,18 +13,17 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   emailjs
     .sendForm(window.emailConfig.serviceID, window.emailConfig.templateID, this)
     .then(() => {
-      showToast("✅ Message sent successfully!", "success");
+      showToast("Message sent successfully!", "success");
       btn.disabled = false;
       this.reset();
     })
     .catch((err) => {
       console.error(err);
-      showToast("❌ Error sending message. Try again.", "error");
+      showToast("Error sending message. Try again.", "error");
       btn.disabled = false;
     });
 });
 
-/* 🔔 Sistema de alertas minimalistas */
 function showToast(message, type = "info") {
   const toast = document.createElement("div");
   toast.textContent = message;

@@ -1,71 +1,85 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+  <!DOCTYPE html>
+  <html lang="en" class="dark>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DarkDub | Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkDub | Portfolio</title>
 
-   <!-- Tailwind + Lucide + Three + Vanta + Devicon + AOS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide-icons@latest/dist/umd/lucide.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+
+
+    <!-- Librerías principales -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- Configurar Tailwind para modo oscuro por clase -->
+  <script>
+  tailwind.config = {
+    darkMode: 'class',
+  };
+</script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: transparent;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+
+      #bg {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 1;
+      }
+      
 
 
-  <style> 
-    html {
-      scroll-behavior: smooth;
-      height: 100%;
-    }
+    </style>
+  </head>
+<body class="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-500">
 
-    body {
-      margin: 0;
-      min-height: 100%;
-      background: transparent;
-    }
+    <!-- Background -->
+    <div id="bg"></div>
 
-    #bg {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 1;
-    }
-  </style>
-</head>
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-950/70 backdrop-blur-md shadow-md z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400 flex items-center gap-2">
+          <i data-lucide="gamepad-2" class="w-6 h-6"></i> DarkDub
+        </h1>
+        <ul class="hidden md:flex gap-6">
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+          <li><a href="#gamedev" class="hover:text-blue-500">GameDev</a></li>
+          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+          <li><a href="#social" class="hover:text-blue-500">Social</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+        <!-- Botón Dark Mode -->
+      <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 transition-colors duration-500">
+  <i id="moon-icon" data-lucide="moon" class="w-5 h-5 block transition-opacity duration-500"></i>
+  <i id="sun-icon" data-lucide="sun" class="w-5 h-5 hidden transition-opacity duration-500"></i>
+</button>
 
-<body class="text-gray-900 dark:text-gray-100 font-sans transition">
 
-  <!-- Background -->
-  <div id="bg"></div>
 
-  <!-- NAV -->
-  <nav class="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-950/70 backdrop-blur-md shadow-md z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400 flex items-center gap-2">
-        <i data-lucide="gamepad-2" class="w-6 h-6"></i> DarkDub
-      </h1>
-      <ul class="hidden md:flex gap-6">
-        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
-        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-        <li><a href="#gamedev" class="hover:text-blue-500">GameDev</a></li>
-        <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-        <li><a href="#social" class="hover:text-blue-500">Social</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-      </ul>
-      <!-- Dark Mode Toggle -->
-      <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:scale-105 transition">
-        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
-        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-      </button>
-    </div>
-  </nav>
+      </div>
+    </nav>
 
   <!-- HERO -->
   <section id="home" class="mt-10 min-h-[70vh] flex flex-col justify-center items-center text-center relative z-10 px-6"
@@ -76,12 +90,24 @@
     <p class="text-lg md:text-xl mb-6 max-w-xl text-gray-300">
       Web Developer & GameDev passionate about design, games, and clean code.
     </p>
-    <div class="flex gap-4">
-      <a href="#projects"
-        class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold shadow-lg transition">View Projects</a>
-      <a href="#contact"
-        class="bg-gray-700 hover:bg-gray-600 px-5 py-2 rounded-lg font-semibold shadow-lg transition">Contact</a>
-    </div>
+ <div class="flex gap-4">
+<div class="flex gap-4">
+  <a href="#projects"
+     class="px-5 py-2 rounded-lg font-semibold shadow-lg transition 
+            bg-blue-600 text-white hover:bg-blue-700 
+            dark:bg-blue-700 dark:text-white">
+     View Projects
+  </a>
+  <a href="#contact"
+     class="px-5 py-2 rounded-lg font-semibold shadow-lg transition 
+            bg-gray-700 text-white hover:bg-gray-600 
+            dark:bg-gray-800 dark:text-white">
+     Contact
+  </a>
+</div>
+
+</div>
+
   </section>
 
   <!-- PROJECTS -->
@@ -90,7 +116,7 @@
       <i data-lucide="folder-code" class="w-7 h-7 text-blue-400"></i> Web Projects
     </h3>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up" >
+      <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up">
         <div class="relative w-full h-full">
           <img src="assets/imagenes/ZapShop/image1.png"
             class="slider-image absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
@@ -107,12 +133,13 @@
         <div
           class="absolute bottom-0 p-5 bg-gradient-to-t from-black/100 via-black/80 to-transparent text-white rounded-b-xl">
           <h4 class="text-xl font-semibold">ZapShop</h4>
-          <p class="text-sm">A sleek and modern online shoe store featuring a secure checkout system, shopping cart, and integrated Gmail notifications. 
-</p>
+          <p class="text-sm">A sleek and modern online shoe store featuring a secure checkout system, shopping cart, and
+            integrated Gmail notifications.
+          </p>
         </div>
       </div>
 
-       <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up" >
+      <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up">
         <div class="relative w-full h-full">
           <img src="assets/imagenes/Silverfox/image1.png"
             class="slider-image absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
@@ -129,11 +156,12 @@
         <div
           class="absolute bottom-0 p-5 bg-gradient-to-t from-black/100 via-black/80 to-transparent text-white rounded-b-xl">
           <h4 class="text-xl font-semibold">Silverfox</h4>
-          <p class="text-sm">A stylish and responsive restaurant website featuring online reservations, detailed dish pages, and an admin dashboard for managing.</p>
+          <p class="text-sm">A stylish and responsive restaurant website featuring online reservations, detailed dish
+            pages, and an admin dashboard for managing.</p>
         </div>
       </div>
 
-      <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up" >
+      <div class="relative group rounded-xl overflow-hidden shadow-lg h-80" data-aos="fade-up">
         <div class="relative w-full h-full">
           <img src="assets/imagenes/WorkDrive/imagen1.jpg"
             class="slider-image absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
@@ -150,7 +178,9 @@
         <div
           class="absolute bottom-0 p-5 bg-gradient-to-t from-black/100 via-black/80 to-transparent text-white rounded-b-xl">
           <h4 class="text-xl font-semibold">WorkDrive</h4>
-          <p class="text-sm">A web platform designed to connect clients with local workers for domestic services. Includes real-time service requests, worker profiles, and management tools for both clients and professionals.</p>
+          <p class="text-sm">A web platform designed to connect clients with local workers for domestic services.
+            Includes real-time service requests, worker profiles, and management tools for both clients and
+            professionals.</p>
         </div>
       </div>
     </div>
@@ -158,50 +188,58 @@
 
   <!-- GAMEDEV -->
   <section id="gamedev" class="max-w-6xl mx-auto py-20 px-6 relative z-10">
-  <h3 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2" data-aos="zoom-in">
-    <i data-lucide="joystick" class="w-7 h-7 text-green-400"></i> Game Development
-  </h3>
+    <h3 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2" data-aos="zoom-in">
+      <i data-lucide="joystick" class="w-7 h-7 text-green-400"></i> Game Development
+    </h3>
 
-  <div class="grid md:grid-cols-2 gap-8">
-    <!-- Unity Game -->
-    <div class="relative group rounded-2xl overflow-hidden shadow-lg h-[28rem]" data-aos="fade-right">
-      <div class="relative w-full h-full">
-        <img src="assets/imagenes/unitygame/imagen1.jpg"
-          class="game-slider absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" alt="Unity Game 1">
-        <img src="assets/imagenes/unitygame/imagen2.jpg"
-          class="game-slider absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" alt="Unity Game 2">
-        <img src="assets/imagenes/unitygame/imagen3.jpg"
-          class="game-slider absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" alt="Unity Game 3">
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Unity Game -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-lg h-[28rem]" data-aos="fade-right">
+        <div class="relative w-full h-full">
+          <img src="assets/imagenes/unitygame/imagen1.jpg"
+            class="game-slider absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+            alt="Unity Game 1">
+          <img src="assets/imagenes/unitygame/imagen2.jpg"
+            class="game-slider absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+            alt="Unity Game 2">
+          <img src="assets/imagenes/unitygame/imagen3.jpg"
+            class="game-slider absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+            alt="Unity Game 3">
+        </div>
+
+        <!-- Gradiente + texto -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+        <div class="absolute bottom-0 p-6 text-white">
+          <h4 class="text-2xl font-semibold drop-shadow-md">Unity Game</h4>
+          <p class="text-sm opacity-90">Adventure game built in Unity with custom mechanics and immersive level design.
+          </p>
+        </div>
       </div>
 
-      <!-- Gradiente + texto -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
-      <div class="absolute bottom-0 p-6 text-white">
-        <h4 class="text-2xl font-semibold drop-shadow-md">Unity Game</h4>
-        <p class="text-sm opacity-90">Adventure game built in Unity with custom mechanics and immersive level design.</p>
+      <!-- Roblox Game -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-lg h-[28rem]" data-aos="fade-left">
+        <div class="relative w-full h-full">
+          <img src="assets/imagenes/roblox/imagen1.jpg"
+            class="game-slider absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+            alt="Roblox Game 1">
+          <img src="assets/imagenes/roblox/imagen2.jpg"
+            class="game-slider absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+            alt="Roblox Game 2">
+          <img src="assets/imagenes/roblox/imagen3.jpg"
+            class="game-slider absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+            alt="Roblox Game 3">
+        </div>
+
+        <!-- Gradiente + texto -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+        <div class="absolute bottom-0 p-6 text-white">
+          <h4 class="text-2xl font-semibold drop-shadow-md">Roblox Game</h4>
+          <p class="text-sm opacity-90">Custom Roblox Studio experience featuring an open-world map and interactive
+            gameplay.</p>
+        </div>
       </div>
     </div>
-
-    <!-- Roblox Game -->
-    <div class="relative group rounded-2xl overflow-hidden shadow-lg h-[28rem]" data-aos="fade-left">
-      <div class="relative w-full h-full">
-        <img src="assets/imagenes/roblox/imagen1.jpg"
-          class="game-slider absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" alt="Roblox Game 1">
-        <img src="assets/imagenes/roblox/imagen2.jpg"
-          class="game-slider absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" alt="Roblox Game 2">
-        <img src="assets/imagenes/roblox/imagen3.jpg"
-          class="game-slider absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" alt="Roblox Game 3">
-      </div>
-
-      <!-- Gradiente + texto -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
-      <div class="absolute bottom-0 p-6 text-white">
-        <h4 class="text-2xl font-semibold drop-shadow-md">Roblox Game</h4>
-        <p class="text-sm opacity-90">Custom Roblox Studio experience featuring an open-world map and interactive gameplay.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- SKILLS -->
@@ -298,39 +336,40 @@
   </section>
 
   <!-- CONTACT -->
-<section id="contact" class="max-w-3xl mx-auto py-20 px-6 relative z-10 text-center" data-aos="fade-up">
-  <h3 class="text-3xl font-bold mb-8 flex items-center justify-center gap-2">
-    <i data-lucide="mail" class="w-7 h-7 text-red-400"></i> Contact Me
-  </h3>
-  <p class="mb-8 text-gray-600 dark:text-gray-300">Let’s work together or talk about a project idea 👇</p>
+  <section id="contact" class="max-w-3xl mx-auto py-20 px-6 relative z-10 text-center" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-8 flex items-center justify-center gap-2">
+      <i data-lucide="mail" class="w-7 h-7 text-red-400"></i> Contact Me
+    </h3>
+    <p class="mb-8 text-gray-600 dark:text-gray-300">Let’s work together or talk about a project idea 👇</p>
 
-  <form id="contact-form" class="space-y-6 bg-white dark:bg-gray-900 shadow-xl rounded-2xl p-8 text-left">
-    <div>
-      <label for="name" class="block font-semibold mb-1 text-gray-700 dark:text-gray-200">Your Name</label>
-      <input type="text" id="name" name="name" required
-        class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none">
-    </div>
+    <form id="contact-form" class="space-y-6 bg-white dark:bg-gray-900 shadow-xl rounded-2xl p-8 text-left">
+      <div>
+        <label for="name" class="block font-semibold mb-1 text-gray-700 dark:text-gray-200">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required
+          class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      </div>
 
-    <div>
-      <label for="email" class="block font-semibold mb-1 text-gray-700 dark:text-gray-200">Your Email</label>
-      <input type="email" id="email" name="email" required
-        class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none">
-    </div>
+      <div>
+        <label for="email" class="block font-semibold mb-1 text-gray-700 dark:text-gray-200">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required
+          class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      </div>
 
-    <div>
-      <label for="message" class="block font-semibold mb-1 text-gray-700 dark:text-gray-200">Message</label>
-      <textarea id="message" name="message" rows="5" required
-        class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
-    </div>
+      <div>
+        <label for="message" class="block font-semibold mb-1 text-gray-700 dark:text-gray-200">Message</label>
+        <textarea id="message" name="message" rows="5" required
+          class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          placeholder="Send your idea or question and discord user"></textarea>
+      </div>
 
-    <button type="submit"
-      class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition flex items-center justify-center gap-2">
-      <i data-lucide="send" class="w-5 h-5"></i> Send Message
-    </button>
+      <button type="submit"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition flex items-center justify-center gap-2">
+        <i data-lucide="send" class="w-5 h-5"></i> Send Message
+      </button>
 
-    <p id="form-status" class="text-center mt-3 text-sm"></p>
-  </form>
-</section>
+      <p id="form-status" class="text-center mt-3 text-sm"></p>
+    </form>
+  </section>
 
 
   <!-- FOOTER -->
@@ -339,16 +378,28 @@
   </footer>
 
   <!-- SCRIPT -->
- <script src="src/js/script.js"></script>
+  <script>
+    // Inicializar iconos y animaciones AOS
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) lucide.createIcons();
+      if (window.AOS) AOS.init();
+    });
+  </script>
+  <script src="src/js/script.js"></script>
+  <script src="src/js/darkMode.js"></script>
   <script src="src/js/config.js"></script>
+
   <script src="src/js/mail.js"></script>
-  <script src="src/js/load.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide-icons@latest/dist/umd/lucide.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+  <script src="https://unpkg.com/lucide-icons@latest/dist/umd/lucide.js"></script>
+  <script src="src/js/loadVentaEffect.js"></script>
+  <script src="src/js/loadIcon.js"></script>
+    
+
 </body>
 
 </html>
